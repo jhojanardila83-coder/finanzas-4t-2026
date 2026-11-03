@@ -1,0 +1,23 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jhojanardila83-coder/finanzas-4t-2026.git"
+  },
+  "author": "Jhojan Ardila",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jhojanardila83-coder/finanzas-4t-2026/issues"
+  },
+  "homepage": "https://github.com/jhojanardila83-coder/finanzas-4t-2026#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
