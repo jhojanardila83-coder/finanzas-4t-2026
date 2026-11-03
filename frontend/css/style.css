@@ -1,0 +1,195 @@
+:root {
+ --color-fondo: #5a0692; /* Celeste/Turquesa de la plataforma */
+ --color-ingreso: #00608a; /* Azul claro para montos */
+ --color-gasto: #850404; /* Rojo claro para gastos */
+ --color-bg-app: #2a0f0f; /* Fondo oscuro azulado */
+ --color-card: #271111; /* Superficie de tarjeta principal */
+ --color-hijo: #3b1e1e; /* Superficie interna / registros */
+ --color-texto: #f8fafc; /* Texto claro */
+ --color-texto-muted: #94a3b8; /* Texto secundario */
+ --color-borde: #334155; /* Bordes sutiles */
+}
+ 
+* {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+ 
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ min-height: 100vh;
+ background: #0f172a;
+ color: var(--color-texto);
+ padding: 20px;
+}
+ 
+/* Contenedor Principal (Tarjeta idéntica a la imagen) */
+.padre {
+ width: 100%;
+ max-width: 420px;
+ background: #111827;
+ border: 1px solid rgba(255, 255, 255, 0.08);
+ border-radius: 16px;
+ box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+ padding: 28px 24px;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
+}
+ 
+/* Tarjetas Hijas */
+.hijo {
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+ 
+/* Títulos y Subtítulos */
+.hijo h2 {
+ font-size: 1.35rem;
+ font-weight: 700;
+ color: #ffffff;
+}
+ 
+.hijo h5 {
+ font-size: 0.8rem;
+ color: var(--color-texto-muted);
+ font-weight: 400;
+ margin-bottom: 5px;
+}
+ 
+/* Etiquetas */
+label {
+ font-size: 0.8rem;
+ color: var(--color-texto-muted);
+ font-weight: 500;
+}
+ 
+/* Inputs y Selects idénticos a la plataforma */
+input[type="number"],
+input[type="date"],
+select,
+.hijo input {
+ width: 100%;
+ background: #1e293b;
+ border: 1px solid var(--color-borde);
+ border-radius: 8px;
+ padding: 11px 14px;
+ color: var(--color-texto);
+ font-size: 0.9rem;
+ outline: none;
+ transition: border-color 0.2s ease;
+}
+ 
+input::placeholder,
+.hijo input::placeholder {
+ color: #64748b;
+}
+ 
+input:focus, select:focus {
+ border-color: var(--color-fondo);
+ box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
+ 
+/* Botón Guardar (Celeste plano tal cual la imagen) */
+button,
+#elBoton {
+ width: 100%;
+ margin-top: 6px;
+ padding: 11px;
+ border: none;
+ background: var(--color-fondo);
+ color: #0f172a;
+ border-radius: 8px;
+ font-size: 0.95rem;
+ font-weight: 700;
+ cursor: pointer;
+ transition: opacity 0.2s ease;
+}
+ 
+button:hover,
+#elBoton:hover {
+ opacity: 0.9;
+}
+ 
+/* Línea divisoria o separación */
+hr {
+ border: none;
+ height: 1px;
+ background: var(--color-borde);
+ margin: 5px 0;
+}
+ 
+/* Bloque de categoría personalizado si lo usas con clase */
+.categoria {
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+}
+ 
+/* Tarjetas de Movimientos Registrados (Idénticas a la captura) */
+.registro {
+ background: #1e293b;
+ border-radius: 8px;
+ padding: 12px 14px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border: 1px solid var(--color-borde);
+ margin-top: 6px;
+}
+ 
+/* Estilo para los textos dentro del registro */
+.registro span {
+ font-size: 0.95rem;
+ color: var(--color-texto);
+}
+ 
+.registro span:first-child {
+ font-weight: 700;
+ color: var(--color-ingreso);
+}
+ 
+.registro h5 {
+ margin: 0;
+ font-size: 0.75rem;
+ color: var(--color-texto-muted);
+ font-weight: 400;
+}
+ 
+/* Contenedor de botones de acción del registro (Editar / Eliminar) */
+.registro div {
+ display: flex;
+ gap: 6px;
+}
+ 
+.registro button {
+ background: #334155;
+ border: none;
+ color: #cbd5e1;
+ width: 28px;
+ height: 28px;
+ border-radius: 6px;
+ font-size: 0.8rem;
+ cursor: pointer;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding: 0;
+ margin: 0;
+ box-shadow: none;
+ transition: background 0.2s;
+}
+ 
+.registro button:hover {
+ background: #475569;
+ color: #ffffff;
+ transform: none;
+ filter: none;
+ box-shadow: none;
+}
+ 

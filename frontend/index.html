@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Iconos para que se vean exactamente los botones de editar y eliminar de la imagen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Administración de Gastos</title>
+</head>
+<body>
+ 
+    <div class="padre">
+        <div class="hijo">
+            <h2>Administración de gastos</h2>
+            <h5>Registra tus ingresos y gastos con claridad y estilo</h5>
+ 
+            <label for="monto">Monto</label>
+            <input type="number" id="monto" placeholder="Ej: 250000">
+ 
+            <label for="fecha">Fecha</label>
+            <input type="date" id="fecha" placeholder="dd/mm/aaaa">
+ 
+            <label for="categoria">Categoría</label>
+            <select id="categoria">
+                <option value="" disabled selected>Selecciona</option>
+                <option value="Comida">Comida</option>
+                <option value="Transporte">Transporte</option>
+                <option value="Servicios">Servicios</option>
+                <option value="Salario">Salario</option>
+            </select>
+ 
+            <button id="elBoton">Guardar</button>
+        </div>
+ 
+        <div class="hijo">      
+            <h2>Movimientos registrados</h2>
+            
+            <!-- Registro 1 (Estilo idéntico a la imagen) -->
+            <div class="registro">  
+                <div class="info-registro">
+                    <span class="monto-ingreso">$250.000</span>
+                    <span class="cat-texto">Salario</span>
+                </div>
+                <div class="acciones">
+                    <button><i class="fa-solid fa-pen"></i></button>
+                    <button><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+ 
+            <!-- Registro 2 -->
+            <div class="registro">  
+                <div class="info-registro">
+                    <span class="monto-gasto">$60.000</span>
+                    <span class="cat-texto">Comida</span>
+                </div>
+                <div class="acciones">
+                    <button><i class="fa-solid fa-pen"></i></button>
+                    <button><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+    <script src="js/app.js"></script>
+</body>
+</html>
+ 
